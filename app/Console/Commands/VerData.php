@@ -37,13 +37,10 @@ class VerData extends Command
      * @return mixed
      */
     public function handle()
-    {
-        $caminho= 'storage/app';
-        
-        $log= new LogConsulta($caminho);
-        
+    {   
+        $caminho = 'storage/app';
+        $log = new LogConsulta($caminho);
         $data = $log->registrar();
-        
         $this->info($data);
     }
 }

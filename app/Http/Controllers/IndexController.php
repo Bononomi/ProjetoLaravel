@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
+   
     public function index() {
-        $titulo = "Senai SC";
-        $rodape = date('Y'). ' Todos os direitos reservados';
+        $titulo = 'SENAI Brusque-SC';
+        $rodape = date('Y').' Todos os direitos reservados';
+        
         return view('site.index', compact('titulo', 'rodape'));
     }
+    
 }

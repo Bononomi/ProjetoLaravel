@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/home', 'IndexController@index');
+Route::get('/', 'IndexController@index');
 Route::get('/institucional', 'InstController@inst');
 Route::get('/produto', 'ProdutoController@produto');
 Route::get('/contato', 'ContatoController@index');

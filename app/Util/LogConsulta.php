@@ -23,7 +23,9 @@ class LogConsulta {
         
         if (file_exists($this->caminho.'/log_geral.txt')) {
             $dadosAtuais = $this->capturar();
-            $dadosAtuais .= "\n".$data;
+            $ip = $_SERVER['REMOTE_ADDR']; 
+            $endereco = $_SERVER['PHP_SELF'];
+            $dadosAtuais .= "\n\n".$data."  |  ".$ip."  |  ".$endereco;
             $this->gravarArquivo($dadosAtuais);
         } else {
             $this->gravarArquivo($data);

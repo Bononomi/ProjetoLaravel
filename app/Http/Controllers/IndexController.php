@@ -14,7 +14,6 @@ class IndexController extends Controller
         
         $caminho = '../storage/app';
         $log = new LogConsulta($caminho);
-        
         $data = $log->registrar();
       
         

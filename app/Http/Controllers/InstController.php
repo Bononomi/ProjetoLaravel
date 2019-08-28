@@ -15,7 +15,6 @@ class InstController extends Controller{
         
         $caminho = '../storage/app';
         $log = new LogConsulta($caminho);
-        
         $data = $log->registrar();
         
         return view('site.inst',compact('titulo', 'rodape'));
